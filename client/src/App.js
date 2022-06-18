@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+import React, {useState, useEffect} from 'react';
+import axios from 'axios';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
+import PetForm from './components/PetForm';
+import PetList from './components/PetList';
+import PetDetails from './components/PetDetails';
+import PetUpdate from './components/PetUpdate';
 
 function App() {
+  const [allPets, setAllPets] = useState([]);
+
+  useEffect(() => {
+    axios.get("http://localhost:8000/api/pets")
+    .then((res) => {
+      console.log(res.data)
+      setAllPets(res.data)
+    })
+    .catch(err => {console.log(err)})
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<PetList allPets={allPets} setAllPets={setAllPets}/>}  path="/" />
+          <Route element={<PetForm allPets={allPets} setAllPets={setAllPets}/>}  path="/new" />
+          <Route element={<PetDetails allPets={allPets} setAllPets={setAllPets}/>}  path="/pets/:_id" />
+          <Route element={<PetUpdate allPets={allPets} setAllPets={setAllPets}/>}  path="/pets/:_id/edit" />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

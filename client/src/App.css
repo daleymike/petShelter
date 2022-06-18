@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+.info-box {
+  border: 1px solid black;
+  width: 400px;
+  height: fit-content;
+  text-align: start;
+  padding: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.like-button {
+  background-color: green;
+  border: 1px solid black;
+  width: 80px;
+  height: 40px;
+  font-weight: bold;
+  border-radius: 4px;
   color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.edit-button {
+  background-color: blue;
+  border: 1px solid black;
+  width: 80px;
+  height: 40px;
+  font-weight: bold;
+  border-radius: 4px;
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+  transition-duration: 0.4s;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.details-button {
+  background-color: green;
+  border: 1px solid black;
+  width: 100px;
+  height: 40px;
+  font-weight: bold;
+  border-radius: 4px;
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.adopt-button {
+  background-color: red;
+  border: 1px solid black;
+  width: 160px;
+  height: 40px;
+  font-weight: bold;
+  border-radius: 4px;
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+  transition-duration: 0.4s;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 600px;
+  margin-top: 50px;
+}
+
+td,
+th {
+  border: 1px solid black;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.create-button {
+  background-color: blue;
+  border: 1px solid black;
+  width: 160px;
+  height: 40px;
+  font-weight: bold;
+  border-radius: 4px;
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+  transition-duration: 0.4s;
+  cursor: pointer;
 }
